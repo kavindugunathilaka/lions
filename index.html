@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0a1628">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Lions Club of Eheliyagoda Legacy | We Serve — District 306 D7, Sri Lanka</title>
+  <meta name="description" content="Lions Club of Eheliyagoda Legacy — Serving the community of Eheliyagoda, Sri Lanka through health camps, education support, and environmental projects. Part of Lions Clubs International, District 306 D7.">
+  <meta name="keywords" content="Lions Club, Eheliyagoda, Sri Lanka, Community Service, District 306 D7, We Serve, Volunteering">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== Intro Video Screen ===== -->
+  <div class="intro-video-screen" id="introVideoScreen">
+    <video id="introVideo" autoplay muted playsinline>
+      <source src="webSiteStart.mp4" type="video/mp4">
+    </video>
+    <button class="intro-skip-btn" id="introSkipBtn">Skip &#9654;</button>
+  </div>
+
+  <!-- ===== Loading Screen ===== -->
+  <div class="loading-screen" id="loadingScreen">
+    <img src="images/logo.png" alt="Lions Club Logo" class="loading-logo">
+    <div class="loading-spinner"></div>
+  </div>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#home" class="nav-brand">
+        <img src="images/logo.png" alt="Lions Club of Eheliyagoda Legacy Logo">
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">Lions Club</span>
+          <span class="nav-brand-sub">Eheliyagoda Legacy</span>
+        </div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#impact">Impact</a>
+        <a href="#history">History</a>
+        <a href="#board">Directors</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="nav-cta">Join Us</a>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== Hero Section ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg" id="heroSlideshow">
+      <div class="hero-slide active"><img src="images/dayone/d23.jpeg" alt="Lions Club Eheliyagoda Legacy — Orientation Program"></div>
+      <div class="hero-slide"><img src="images/hero-bg.png" alt="Eheliyagoda city" loading="lazy"></div>
+      <div class="hero-slide"><img src="images/dayone/d01.jpeg" alt="Certificate presentation ceremony" loading="lazy"></div>
+      <div class="hero-slide"><img src="images/dayone/d17.jpeg" alt="Oil lamp lighting ceremony" loading="lazy"></div>
+      <div class="hero-slide"><img src="images/dayone/d06.jpeg" alt="District official address" loading="lazy"></div>
+      <div class="hero-slide"><img src="images/dayone/d04.jpeg" alt="Orientation session" loading="lazy"></div>
+      <div class="hero-slide"><img src="images/dayone/d22.jpeg" alt="Program presentation" loading="lazy"></div>
+      <div class="hero-slide"><img src="images/dayone/d02.jpeg" alt="Orientation day" loading="lazy"></div>
+      <div class="hero-slide"><img src="images/dayone/d03.jpeg" alt="Orientation day" loading="lazy"></div>
+      <div class="hero-slide"><img src="images/dayone/d05.jpeg" alt="Orientation day" loading="lazy"></div>
+      <div class="hero-slide"><img src="images/dayone/d07.jpeg" alt="Orientation day" loading="lazy"></div>
+      <div class="hero-slide"><img src="images/dayone/d08.jpeg" alt="Orientation day" loading="lazy"></div>
+      <div class="hero-slide"><img src="images/dayone/d09.jpeg" alt="Orientation day" loading="lazy"></div>
+      <div class="hero-slide"><img src="images/dayone/d10.jpeg" alt="Orientation day" loading="lazy"></div>
+      <div class="hero-slide"><img src="images/dayone/d11.jpeg" alt="Orientation day" loading="lazy"></div>
+      <div class="hero-slide"><img src="images/dayone/d13.jpeg" alt="Orientation day" loading="lazy"></div>
+      <div class="hero-slide"><img src="images/dayone/d15.jpeg" alt="Orientation day" loading="lazy"></div>
+      <div class="hero-slide"><img src="images/dayone/d16.jpeg" alt="Orientation day" loading="lazy"></div>
+      <div class="hero-slide"><img src="images/dayone/d18.jpeg" alt="Orientation day" loading="lazy"></div>
+      <div class="hero-slide"><img src="images/dayone/d19.jpeg" alt="Orientation day" loading="lazy"></div>
+      <div class="hero-slide"><img src="images/dayone/d20.jpeg" alt="Orientation day" loading="lazy"></div>
+      <div class="hero-slide"><img src="images/dayone/d21.jpeg" alt="Orientation day" loading="lazy"></div>
+      <div class="hero-slide"><img src="images/dayone/d24.jpeg" alt="Orientation day" loading="lazy"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-pattern"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="pulse"></span>
+        Lions Clubs International — District 306 D7
+      </div>
+      <h1>
+        Empowering<br>
+        <span class="gold-text">Eheliyagoda</span><br>
+        Through Service
+      </h1>
+      <p class="hero-description">
+        Dedicated to making a lasting difference in our community through humanitarian service,
+        leadership development, and compassionate action since the founding of our club.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">
+          <span class="material-icons-round" style="font-size:1.1rem">volunteer_activism</span>
+          Become a Member
+        </a>
+        <a href="#projects" class="btn btn-outline">
+          <span class="material-icons-round" style="font-size:1.1rem">explore</span>
+          Explore Projects
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="stat-number" data-count="150">0</div>
+          <div class="stat-label">Members</div>
+        </div>
+        <div class="hero-stat">
+          <div class="stat-number" data-count="85">0</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="hero-stat">
+          <div class="stat-number" data-count="12">0</div>
+          <div class="stat-label">Awards</div>
+        </div>
+        <div class="hero-stat">
+          <div class="stat-number" data-count="5000">0</div>
+          <div class="stat-label">Lives Impacted</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-mouse"></div>
+      Scroll to explore
+    </div>
+  </section>
+
+  <!-- ===== About Section ===== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrapper animate-on-scroll">
+          <div class="about-image">
+            <img src="images/community-service.png" alt="Lions Club community service">
+          </div>
+          <div class="about-image-accent">
+            <span class="accent-number">306 D7</span>
+            <span class="accent-text">District</span>
+          </div>
+        </div>
+        <div class="about-content animate-on-scroll">
+          <div class="section-badge">
+            <span class="material-icons-round badge-icon">info</span>
+            About Us
+          </div>
+          <h2>Serving with Heart,<br>Leading with Purpose</h2>
+          <p class="about-lead">
+            The Lions Club of Eheliyagoda Legacy is a proud member of Lions Clubs International, operating under District 306 D7 in Sri Lanka.
+          </p>
+          <p>
+            Guided by our motto <strong>"We Serve,"</strong> we have been actively working to uplift the lives of people in Eheliyagoda
+            and surrounding communities through health initiatives, educational programs, environmental conservation,
+            and disaster relief efforts.
+          </p>
+          <p>
+            Our meetings are held every Sunday at 7:00 PM in Thoranagoda, Eheliyagoda. We welcome
+            anyone with a passion for community service to join our family.
+          </p>
+          <div class="vision-mission-boxes">
+            <div class="vm-box vm-vision">
+              <span class="material-icons-round vm-icon">visibility</span>
+              <h4>Our Vision</h4>
+              <p>"To be the global leader in community and humanitarian service"</p>
+            </div>
+            <div class="vm-box vm-mission">
+              <span class="material-icons-round vm-icon">track_changes</span>
+              <h4>Our Mission</h4>
+              <p>"To empower volunteers to serve their communities, meet humanitarian needs, encourage peace and promote international understanding through Lions Clubs"</p>
+            </div>
+          </div>
+          <div class="about-features">
+            <div class="about-feature">
+              <div class="feature-icon">
+                <span class="material-icons-round">health_and_safety</span>
+              </div>
+              <span class="feature-text">Health Camps</span>
+            </div>
+            <div class="about-feature">
+              <div class="feature-icon">
+                <span class="material-icons-round">school</span>
+              </div>
+              <span class="feature-text">Education Aid</span>
+            </div>
+            <div class="about-feature">
+              <div class="feature-icon">
+                <span class="material-icons-round">eco</span>
+              </div>
+              <span class="feature-text">Green Projects</span>
+            </div>
+            <div class="about-feature">
+              <div class="feature-icon">
+                <span class="material-icons-round">diversity_3</span>
+              </div>
+              <span class="feature-text">Youth Empowerment</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Projects Section ===== -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <div class="section-badge">
+          <span class="material-icons-round badge-icon">rocket_launch</span>
+          Our Projects
+        </div>
+        <h2 class="section-title">Making a <span class="highlight">Real Impact</span></h2>
+        <p class="section-subtitle">
+          From health camps to environmental conservation, our projects touch lives and transform communities across Eheliyagoda.
+        </p>
+      </div>
+      <div class="projects-grid">
+        <!-- Project Card 1 -->
+        <div class="project-card animate-on-scroll">
+          <div class="project-card-image">
+            <img src="images/blood-donation.png" alt="Blood donation camp">
+            <span class="project-card-category category-health">Health</span>
+          </div>
+          <div class="project-card-body">
+            <h3>Blood Donation Campaign</h3>
+            <p>A large-scale blood donation camp organized in partnership with the Narahenpita Blood Bank, saving hundreds of lives through community donations.</p>
+            <div class="project-card-meta">
+              <span class="project-date">
+                <span class="material-icons-round" style="font-size:0.9rem;vertical-align:middle">calendar_today</span>
+                March 2026
+              </span>
+              <a href="#" class="project-link">
+                Learn More
+                <span class="material-icons-round" style="font-size:1rem">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Project Card 2 -->
+        <div class="project-card animate-on-scroll">
+          <div class="project-card-image">
+            <img src="images/education-support.png" alt="Education support project">
+            <span class="project-card-category category-education">Education</span>
+          </div>
+          <div class="project-card-body">
+            <h3>Scholar Achiever Awards</h3>
+            <p>Honoring outstanding students from Al Aksha Muslim Vidyalaya and local schools for their academic excellence and providing scholarships.</p>
+            <div class="project-card-meta">
+              <span class="project-date">
+                <span class="material-icons-round" style="font-size:0.9rem;vertical-align:middle">calendar_today</span>
+                January 2026
+              </span>
+              <a href="#" class="project-link">
+                Learn More
+                <span class="material-icons-round" style="font-size:1rem">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Project Card 3 -->
+        <div class="project-card animate-on-scroll">
+          <div class="project-card-image">
+            <img src="images/environment-project.png" alt="Environmental conservation project">
+            <span class="project-card-category category-environment">Environment</span>
+          </div>
+          <div class="project-card-body">
+            <h3>Green Eheliyagoda Initiative</h3>
+            <p>A tree-planting and river cleanup drive along the Kalu Ganga tributaries, contributing to a greener and cleaner environment.</p>
+            <div class="project-card-meta">
+              <span class="project-date">
+                <span class="material-icons-round" style="font-size:0.9rem;vertical-align:middle">calendar_today</span>
+                November 2025
+              </span>
+              <a href="#" class="project-link">
+                Learn More
+                <span class="material-icons-round" style="font-size:1rem">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Impact Section ===== -->
+  <section class="impact" id="impact">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <div class="section-badge" style="border-color:rgba(212,168,67,0.3);color:var(--primary-gold-light)">
+          <span class="material-icons-round badge-icon">insights</span>
+          Our Impact
+        </div>
+        <h2 class="section-title">Numbers That <span class="highlight">Speak</span></h2>
+        <p class="section-subtitle">
+          Every number represents a life touched, a community uplifted, and a promise fulfilled.
+        </p>
+      </div>
+      <div class="impact-stats">
+        <div class="impact-stat animate-on-scroll">
+          <div class="stat-icon">
+            <span class="material-icons-round">groups</span>
+          </div>
+          <div class="stat-value"><span data-count="150">0</span><span class="stat-suffix">+</span></div>
+          <div class="stat-description">Active Members</div>
+        </div>
+        <div class="impact-stat animate-on-scroll">
+          <div class="stat-icon">
+            <span class="material-icons-round">task_alt</span>
+          </div>
+          <div class="stat-value"><span data-count="85">0</span><span class="stat-suffix">+</span></div>
+          <div class="stat-description">Projects Completed</div>
+        </div>
+        <div class="impact-stat animate-on-scroll">
+          <div class="stat-icon">
+            <span class="material-icons-round">favorite</span>
+          </div>
+          <div class="stat-value"><span data-count="5000">0</span><span class="stat-suffix">+</span></div>
+          <div class="stat-description">Lives Impacted</div>
+        </div>
+        <div class="impact-stat animate-on-scroll">
+          <div class="stat-icon">
+            <span class="material-icons-round">emoji_events</span>
+          </div>
+          <div class="stat-value"><span data-count="12">0</span><span class="stat-suffix"></span></div>
+          <div class="stat-description">Awards Received</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Timeline Section ===== -->
+  <section class="timeline-section" id="history">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <div class="section-badge">
+          <span class="material-icons-round badge-icon">history</span>
+          Our Journey
+        </div>
+        <h2 class="section-title">A Legacy of <span class="highlight">Service</span></h2>
+        <p class="section-subtitle">
+          Milestones that shaped our club's journey of compassion and community empowerment.
+        </p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">Charter Year</span>
+            <h3>Club Chartered</h3>
+            <p>Lions Club of Eheliyagoda Legacy was officially chartered under Lions Clubs International, District 306 D7, beginning our mission to serve the community.</p>
+          </div>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">Growth Phase</span>
+            <h3>Membership Expansion</h3>
+            <p>The club grew to over 50 active members, establishing strong partnerships with local institutions and government bodies.</p>
+          </div>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">Community Impact</span>
+            <h3>First Major Health Camp</h3>
+            <p>Organized our first district-level blood donation camp, collecting over 200 units and setting a new record for the region.</p>
+          </div>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">Recognition</span>
+            <h3>District Award Winner</h3>
+            <p>Recognized with the District Governor's Excellence Award for outstanding community service and membership growth.</p>
+          </div>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2025 – Present</span>
+            <h3>Digital Transformation</h3>
+            <p>Launched our official website and expanded our digital presence to engage youth and attract new members from across the region.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Board Section ===== -->
+  <section class="board" id="board">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <div class="section-badge">
+          <span class="material-icons-round badge-icon">people</span>
+          Leadership
+        </div>
+        <h2 class="section-title">Our <span class="highlight">Club Directors</span></h2>
+        <p class="section-subtitle">
+          The office bearers and directors of Lions Club of Eheliyagoda Legacy for the 2026/2027 Lions year.
+        </p>
+      </div>
+      <div class="board-grid">
+        <div class="board-card animate-on-scroll">
+          <div class="board-avatar-wrap">
+            <img class="board-avatar-img" src="images/board/president.jpeg" alt="Lion M A Pathmasiri Jayasinghe MAF">
+          </div>
+          <h3>Lion M A Pathmasiri Jayasinghe MAF</h3>
+          <div class="board-role">President</div>
+          <p class="board-bio">Founding President of Lions Club of Eheliyagoda Legacy, leading with a vision for meaningful community impact and humanitarian service in District 306 D7.</p>
+        </div>
+        <div class="board-card animate-on-scroll">
+          <div class="board-avatar-wrap">
+            <img class="board-avatar-img" src="images/board/vp1.jpeg" alt="Lion Ravi Sirimanna">
+          </div>
+          <h3>Lion Ravi Sirimanna</h3>
+          <div class="board-role">1st Vice President / GMCT</div>
+          <p class="board-bio">Supporting club leadership and driving membership growth as 1st Vice President and Global Membership Coordinator for District 306 D7.</p>
+        </div>
+        <div class="board-card animate-on-scroll">
+          <div class="board-avatar-wrap">
+            <img class="board-avatar-img" src="images/board/secretary.png" alt="Lion A R Nishantha Dasanayake MAF">
+          </div>
+          <h3>Lion A R Nishantha Dasanayake MAF</h3>
+          <div class="board-role">2nd Vice President / Secretary</div>
+          <p class="board-bio">Managing club operations and ensuring seamless coordination across all community service initiatives and district engagements.</p>
+        </div>
+        <div class="board-card animate-on-scroll">
+          <div class="board-avatar-wrap">
+            <img class="board-avatar-img" src="images/board/vp3.jpeg" alt="Lion G R Pathiraja Dharmasena MAF">
+          </div>
+          <h3>Lion G R Pathiraja Dharmasena MAF</h3>
+          <div class="board-role">3rd Vice President</div>
+          <p class="board-bio">Strengthening club leadership and supporting the planning and delivery of our humanitarian and community service projects.</p>
+        </div>
+        <div class="board-card animate-on-scroll">
+          <div class="board-avatar-wrap">
+            <img class="board-avatar-img" src="images/board/treasurer.jpeg" alt="Lion Asanga Kasthuriarachchi MAF">
+          </div>
+          <h3>Lion Asanga Kasthuriarachchi MAF</h3>
+          <div class="board-role">Treasurer</div>
+          <p class="board-bio">Ensuring transparent financial management and resource allocation for all humanitarian projects and community programs.</p>
+        </div>
+        <div class="board-card animate-on-scroll">
+          <div class="board-avatar-wrap">
+            <img class="board-avatar-img" src="images/board/glt.jpg" alt="Lion Gimhana Mahakumarage MJF">
+          </div>
+          <h3>Lion Gimhana Mahakumarage MJF</h3>
+          <div class="board-role">GLT — Global Leadership Team</div>
+          <p class="board-bio">Leading member development and leadership training initiatives to build a strong and capable team of Lions.</p>
+        </div>
+        <div class="board-card animate-on-scroll">
+          <div class="board-avatar-wrap">
+            <img class="board-avatar-img" src="images/board/gmt.png" alt="Lion J Nishantha Jayakody">
+          </div>
+          <h3>Lion J Nishantha Jayakody</h3>
+          <div class="board-role">GMT / Tamer</div>
+          <p class="board-bio">Driving membership growth as Global Membership Team coordinator and upholding fellowship and decorum at club meetings.</p>
+        </div>
+        <div class="board-card animate-on-scroll">
+          <div class="board-avatar-wrap">
+            <img class="board-avatar-img" src="images/board/lcif.png" alt="Lion Mohamed Risvi (JP/MAF)">
+          </div>
+          <h3>Lion Mohamed Risvi (JP/MAF)</h3>
+          <div class="board-role">LCIF / Tail Twister</div>
+          <p class="board-bio">Championing Lions Clubs International Foundation causes and keeping the spirit of fellowship and fun alive within the club.</p>
+        </div>
+        <div class="board-card animate-on-scroll">
+          <div class="board-avatar-wrap">
+            <img class="board-avatar-img" src="images/board/gst.jpeg" alt="Lion Kavindu Vimantha Gunathilaka">
+          </div>
+          <h3>Lion Kavindu Vimantha Gunathilaka</h3>
+          <div class="board-role">GST — Global Service Team</div>
+          <p class="board-bio">Coordinating community service projects and reporting our humanitarian impact as Global Service Team coordinator.</p>
+        </div>
+      </div>
+
+      <h3 class="board-subheading animate-on-scroll">Board of Directors</h3>
+      <div class="board-grid">
+        <div class="board-card animate-on-scroll">
+          <div class="board-avatar-wrap">
+            <img class="board-avatar-img" src="images/board/dir-thilak.jpeg" alt="Lion Thilak Rajapaksha MAF">
+          </div>
+          <h3>Lion Thilak Rajapaksha MAF</h3>
+          <div class="board-role">Director</div>
+          <p class="board-bio">A dedicated member of the board, supporting the club's service initiatives and community engagement across the region.</p>
+        </div>
+        <div class="board-card animate-on-scroll">
+          <div class="board-avatar-wrap">
+            <img class="board-avatar-img" src="images/board/dir-nilanthi.jpeg" alt="Lion Lady Nilanthi Rajapaksha MAF">
+          </div>
+          <h3>Lion Lady Nilanthi Rajapaksha MAF</h3>
+          <div class="board-role">Director</div>
+          <p class="board-bio">A dedicated member of the board, supporting the club's service initiatives and community engagement across the region.</p>
+        </div>
+        <div class="board-card animate-on-scroll">
+          <div class="board-avatar-wrap">
+            <img class="board-avatar-img" src="images/board/dir-kumarasiri.jpeg" alt="Lion Dr D L N Kumarasiri">
+          </div>
+          <h3>Lion Dr D L N Kumarasiri</h3>
+          <div class="board-role">Director</div>
+          <p class="board-bio">A dedicated member of the board, supporting the club's service initiatives and community engagement across the region.</p>
+        </div>
+        <div class="board-card animate-on-scroll">
+          <div class="board-avatar-wrap">
+            <img class="board-avatar-img" src="images/board/dir-bandara.png" alt="Lion Dr D R W Bandara">
+          </div>
+          <h3>Lion Dr D R W Bandara</h3>
+          <div class="board-role">Director</div>
+          <p class="board-bio">A dedicated member of the board, supporting the club's service initiatives and community engagement across the region.</p>
+        </div>
+        <div class="board-card animate-on-scroll">
+          <div class="board-avatar-wrap">
+            <img class="board-avatar-img" src="images/board/dir-sadeeka.jpeg" alt="Lion Lady Ishari Sadeeka Punchihewa">
+          </div>
+          <h3>Lion Lady Ishari Sadeeka Punchihewa</h3>
+          <div class="board-role">Director</div>
+          <p class="board-bio">A dedicated member of the board, supporting the club's service initiatives and community engagement across the region.</p>
+        </div>
+        <div class="board-card animate-on-scroll">
+          <div class="board-avatar-wrap">
+            <img class="board-avatar-img" src="images/board/dir-charuka.jpg" alt="Lion Lady Charuka Jayaweera">
+          </div>
+          <h3>Lion Lady Charuka Jayaweera</h3>
+          <div class="board-role">Director</div>
+          <p class="board-bio">A dedicated member of the board, supporting the club's service initiatives and community engagement across the region.</p>
+        </div>
+        <div class="board-card animate-on-scroll">
+          <div class="board-avatar-wrap">
+            <img class="board-avatar-img" src="images/board/dir-deepani.svg" alt="Lion Lady Deepani Panambara">
+          </div>
+          <h3>Lion Lady Deepani Panambara</h3>
+          <div class="board-role">Director</div>
+          <p class="board-bio">A dedicated member of the board, supporting the club's service initiatives and community engagement across the region.</p>
+        </div>
+        <div class="board-card animate-on-scroll">
+          <div class="board-avatar-wrap">
+            <img class="board-avatar-img" src="images/board/dir-buddhika.jpg" alt="Lion Buddhika Tennekoon">
+          </div>
+          <h3>Lion Buddhika Tennekoon</h3>
+          <div class="board-role">Director</div>
+          <p class="board-bio">A dedicated member of the board, supporting the club's service initiatives and community engagement across the region.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Orientation Gallery ===== -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <div class="section-badge">
+          <span class="material-icons-round badge-icon">photo_library</span>
+          Gallery
+        </div>
+        <h2 class="section-title">Orientation Day — <span class="text-gold">Day One</span></h2>
+        <p class="section-subtitle">
+          A milestone moment — the founding orientation program of Lions Club of Eheliyagoda Legacy,
+          District 306 D7, held on June 24, 2026.
+        </p>
+      </div>
+
+      <div class="gallery-featured animate-on-scroll" data-lightbox="images/dayone/d23.jpeg" data-caption="Orientation Program — Lions Club of Eheliyagoda Legacy, June 24, 2026">
+        <img src="images/dayone/d23.jpeg" alt="Lions Club of Eheliyagoda Legacy — Orientation Program" loading="lazy">
+        <div class="gallery-featured-caption">
+          <span class="material-icons-round">groups</span>
+          Orientation Program — Lions Club of Eheliyagoda Legacy, June 24, 2026
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item gallery-item--wide animate-on-scroll" data-lightbox="images/dayone/d01.jpeg" data-caption="Certificate &amp; pin presentation ceremony">
+          <img src="images/dayone/d01.jpeg" alt="Certificate presentation" loading="lazy">
+          <div class="gallery-overlay"><span class="material-icons-round">zoom_in</span></div>
+        </div>
+        <div class="gallery-item animate-on-scroll" data-lightbox="images/dayone/d17.jpeg" data-caption="Traditional oil lamp lighting ceremony">
+          <img src="images/dayone/d17.jpeg" alt="Oil lamp ceremony" loading="lazy">
+          <div class="gallery-overlay"><span class="material-icons-round">zoom_in</span></div>
+        </div>
+        <div class="gallery-item animate-on-scroll" data-lightbox="images/dayone/d06.jpeg" data-caption="Address by senior Lions District official">
+          <img src="images/dayone/d06.jpeg" alt="District official" loading="lazy">
+          <div class="gallery-overlay"><span class="material-icons-round">zoom_in</span></div>
+        </div>
+        <div class="gallery-item animate-on-scroll" data-lightbox="images/dayone/d22.jpeg" data-caption="Program presentation &amp; address">
+          <img src="images/dayone/d22.jpeg" alt="Program presentation" loading="lazy">
+          <div class="gallery-overlay"><span class="material-icons-round">zoom_in</span></div>
+        </div>
+        <div class="gallery-item animate-on-scroll" data-lightbox="images/dayone/d04.jpeg" data-caption="Orientation program session">
+          <img src="images/dayone/d04.jpeg" alt="Orientation session" loading="lazy">
+          <div class="gallery-overlay"><span class="material-icons-round">zoom_in</span></div>
+        </div>
+        <div class="gallery-item animate-on-scroll" data-lightbox="images/dayone/d02.jpeg" data-caption="Orientation day moments">
+          <img src="images/dayone/d02.jpeg" alt="Orientation day" loading="lazy">
+          <div class="gallery-overlay"><span class="material-icons-round">zoom_in</span></div>
+        </div>
+        <div class="gallery-item animate-on-scroll" data-lightbox="images/dayone/d03.jpeg" data-caption="Orientation day moments">
+          <img src="images/dayone/d03.jpeg" alt="Orientation day" loading="lazy">
+          <div class="gallery-overlay"><span class="material-icons-round">zoom_in</span></div>
+        </div>
+        <div class="gallery-item animate-on-scroll" data-lightbox="images/dayone/d05.jpeg" data-caption="Orientation day moments">
+          <img src="images/dayone/d05.jpeg" alt="Orientation day" loading="lazy">
+          <div class="gallery-overlay"><span class="material-icons-round">zoom_in</span></div>
+        </div>
+        <div class="gallery-item animate-on-scroll" data-lightbox="images/dayone/d07.jpeg" data-caption="Orientation day moments">
+          <img src="images/dayone/d07.jpeg" alt="Orientation day" loading="lazy">
+          <div class="gallery-overlay"><span class="material-icons-round">zoom_in</span></div>
+        </div>
+        <div class="gallery-item animate-on-scroll" data-lightbox="images/dayone/d08.jpeg" data-caption="Orientation day moments">
+          <img src="images/dayone/d08.jpeg" alt="Orientation day" loading="lazy">
+          <div class="gallery-overlay"><span class="material-icons-round">zoom_in</span></div>
+        </div>
+        <div class="gallery-item animate-on-scroll" data-lightbox="images/dayone/d09.jpeg" data-caption="Orientation day moments">
+          <img src="images/dayone/d09.jpeg" alt="Orientation day" loading="lazy">
+          <div class="gallery-overlay"><span class="material-icons-round">zoom_in</span></div>
+        </div>
+        <div class="gallery-item animate-on-scroll" data-lightbox="images/dayone/d10.jpeg" data-caption="Orientation day moments">
+          <img src="images/dayone/d10.jpeg" alt="Orientation day" loading="lazy">
+          <div class="gallery-overlay"><span class="material-icons-round">zoom_in</span></div>
+        </div>
+        <div class="gallery-item animate-on-scroll" data-lightbox="images/dayone/d11.jpeg" data-caption="Orientation day moments">
+          <img src="images/dayone/d11.jpeg" alt="Orientation day" loading="lazy">
+          <div class="gallery-overlay"><span class="material-icons-round">zoom_in</span></div>
+        </div>
+        <div class="gallery-item animate-on-scroll" data-lightbox="images/dayone/d13.jpeg" data-caption="Orientation day moments">
+          <img src="images/dayone/d13.jpeg" alt="Orientation day" loading="lazy">
+          <div class="gallery-overlay"><span class="material-icons-round">zoom_in</span></div>
+        </div>
+        <div class="gallery-item animate-on-scroll" data-lightbox="images/dayone/d15.jpeg" data-caption="Orientation day moments">
+          <img src="images/dayone/d15.jpeg" alt="Orientation day" loading="lazy">
+          <div class="gallery-overlay"><span class="material-icons-round">zoom_in</span></div>
+        </div>
+        <div class="gallery-item animate-on-scroll" data-lightbox="images/dayone/d16.jpeg" data-caption="Orientation day moments">
+          <img src="images/dayone/d16.jpeg" alt="Orientation day" loading="lazy">
+          <div class="gallery-overlay"><span class="material-icons-round">zoom_in</span></div>
+        </div>
+        <div class="gallery-item animate-on-scroll" data-lightbox="images/dayone/d18.jpeg" data-caption="Orientation day moments">
+          <img src="images/dayone/d18.jpeg" alt="Orientation day" loading="lazy">
+          <div class="gallery-overlay"><span class="material-icons-round">zoom_in</span></div>
+        </div>
+        <div class="gallery-item animate-on-scroll" data-lightbox="images/dayone/d19.jpeg" data-caption="Orientation day moments">
+          <img src="images/dayone/d19.jpeg" alt="Orientation day" loading="lazy">
+          <div class="gallery-overlay"><span class="material-icons-round">zoom_in</span></div>
+        </div>
+        <div class="gallery-item animate-on-scroll" data-lightbox="images/dayone/d20.jpeg" data-caption="Orientation day moments">
+          <img src="images/dayone/d20.jpeg" alt="Orientation day" loading="lazy">
+          <div class="gallery-overlay"><span class="material-icons-round">zoom_in</span></div>
+        </div>
+        <div class="gallery-item animate-on-scroll" data-lightbox="images/dayone/d21.jpeg" data-caption="Orientation day moments">
+          <img src="images/dayone/d21.jpeg" alt="Orientation day" loading="lazy">
+          <div class="gallery-overlay"><span class="material-icons-round">zoom_in</span></div>
+        </div>
+        <div class="gallery-item animate-on-scroll" data-lightbox="images/dayone/d24.jpeg" data-caption="Orientation day moments">
+          <img src="images/dayone/d24.jpeg" alt="Orientation day" loading="lazy">
+          <div class="gallery-overlay"><span class="material-icons-round">zoom_in</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close"><span class="material-icons-round">close</span></button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous"><span class="material-icons-round">chevron_left</span></button>
+    <button class="lightbox-next" id="lightboxNext" aria-label="Next"><span class="material-icons-round">chevron_right</span></button>
+    <div class="lightbox-inner">
+      <img class="lightbox-img" id="lightboxImg" src="" alt="">
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <!-- ===== Events Section ===== -->
+  <section class="events" id="events">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <div class="section-badge">
+          <span class="material-icons-round badge-icon">event</span>
+          Events
+        </div>
+        <h2 class="section-title">Upcoming <span class="highlight">Events</span></h2>
+        <p class="section-subtitle">
+          Stay connected with our latest events and join us in making a difference.
+        </p>
+      </div>
+      <div class="events-grid">
+        <div class="event-card animate-on-scroll">
+          <div class="event-date-box">
+            <span class="event-month">Jul</span>
+            <span class="event-day">15</span>
+            <span class="event-year">2026</span>
+          </div>
+          <div class="event-info">
+            <h3>Annual Blood Donation Camp</h3>
+            <p>Join us for our annual blood donation drive at Eheliyagoda Divisional Secretariat. Every drop counts!</p>
+            <span class="event-tag tag-upcoming">
+              <span class="material-icons-round" style="font-size:0.8rem">schedule</span>
+              Upcoming
+            </span>
+          </div>
+        </div>
+        <div class="event-card animate-on-scroll">
+          <div class="event-date-box">
+            <span class="event-month">Aug</span>
+            <span class="event-day">05</span>
+            <span class="event-year">2026</span>
+          </div>
+          <div class="event-info">
+            <h3>Scholarship Awards Ceremony</h3>
+            <p>Celebrating academic excellence by awarding scholarships to outstanding students in the Eheliyagoda region.</p>
+            <span class="event-tag tag-upcoming">
+              <span class="material-icons-round" style="font-size:0.8rem">schedule</span>
+              Upcoming
+            </span>
+          </div>
+        </div>
+        <div class="event-card animate-on-scroll">
+          <div class="event-date-box">
+            <span class="event-month">Sep</span>
+            <span class="event-day">20</span>
+            <span class="event-year">2026</span>
+          </div>
+          <div class="event-info">
+            <h3>Green Walk — Tree Planting</h3>
+            <p>A community tree planting initiative as part of our environmental conservation efforts in the Sabaragamuwa region.</p>
+            <span class="event-tag tag-upcoming">
+              <span class="material-icons-round" style="font-size:0.8rem">schedule</span>
+              Upcoming
+            </span>
+          </div>
+        </div>
+        <div class="event-card animate-on-scroll">
+          <div class="event-date-box">
+            <span class="event-month">May</span>
+            <span class="event-day">12</span>
+            <span class="event-year">2026</span>
+          </div>
+          <div class="event-info">
+            <h3>Free Eye Clinic — Vision First</h3>
+            <p>Provided free eye examinations and spectacles to over 200 community members in partnership with local hospitals.</p>
+            <span class="event-tag tag-past">
+              <span class="material-icons-round" style="font-size:0.8rem">check_circle</span>
+              Completed
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA Section ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content animate-on-scroll">
+        <h2>"We Serve" — Join the Movement</h2>
+        <p>
+          Become part of the world's largest humanitarian service organization.
+          Together, we can build a stronger, healthier, and more compassionate Eheliyagoda.
+        </p>
+        <div class="cta-actions">
+          <a href="#contact" class="btn btn-primary">
+            <span class="material-icons-round" style="font-size:1.1rem">handshake</span>
+            Become a Lion
+          </a>
+          <a href="https://lionsmd306.lk/" target="_blank" rel="noopener" class="btn btn-outline">
+            <span class="material-icons-round" style="font-size:1.1rem">language</span>
+            Visit District 306 D7
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact Section ===== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <div class="section-badge">
+          <span class="material-icons-round badge-icon">mail</span>
+          Contact Us
+        </div>
+        <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+        <p class="section-subtitle">
+          Have questions about our club or want to get involved? We'd love to hear from you.
+        </p>
+      </div>
+      <div class="contact-grid">
+        <form class="contact-form animate-on-scroll" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" placeholder="Your first name" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Your last name" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="">Select a topic</option>
+              <option value="membership">Membership Inquiry</option>
+              <option value="sponsorship">Sponsorship & Donations</option>
+              <option value="volunteer">Volunteer Opportunities</option>
+              <option value="general">General Question</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us how we can help..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-solid" style="width:100%;justify-content:center">
+            <span class="material-icons-round" style="font-size:1.1rem">send</span>
+            Send Message
+          </button>
+        </form>
+        <div class="contact-info animate-on-scroll">
+          <div class="contact-info-card">
+            <div class="contact-icon">
+              <span class="material-icons-round">location_on</span>
+            </div>
+            <div>
+              <h4>Club Location</h4>
+              <p>Thoranagoda, Eheliyagoda<br>Sabaragamuwa Province, Sri Lanka</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-icon">
+              <span class="material-icons-round">schedule</span>
+            </div>
+            <div>
+              <h4>Meeting Schedule</h4>
+              <p>Every Sunday at 7:00 PM<br>All are welcome to attend</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-icon">
+              <span class="material-icons-round">email</span>
+            </div>
+            <div>
+              <h4>Email Us</h4>
+              <p>info@eheliyagodlions.lk<br>membership@eheliyagodlions.lk</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-icon">
+              <span class="material-icons-round">phone</span>
+            </div>
+            <div>
+              <h4>Call Us</h4>
+              <p>+94 36 225 XXXX<br>+94 77 XXX XXXX</p>
+            </div>
+          </div>
+          <div>
+            <h4 style="font-size:0.85rem;font-weight:700;color:var(--primary-navy);margin-bottom:12px;">Follow Us</h4>
+            <div class="contact-social">
+              <a href="#" class="social-link" aria-label="Facebook">
+                <span class="material-icons-round">facebook</span>
+              </a>
+              <a href="#" class="social-link" aria-label="Instagram">
+                <span class="material-icons-round">photo_camera</span>
+              </a>
+              <a href="#" class="social-link" aria-label="YouTube">
+                <span class="material-icons-round">smart_display</span>
+              </a>
+              <a href="#" class="social-link" aria-label="WhatsApp">
+                <span class="material-icons-round">chat</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="nav-brand">
+            <img src="images/logo.png" alt="Lions Club Logo">
+            <div class="nav-brand-text">
+              <span class="nav-brand-name">Lions Club</span>
+              <span class="nav-brand-sub">Eheliyagoda Legacy</span>
+            </div>
+          </a>
+          <p>
+            Part of the world's largest humanitarian service organization.
+            Serving the community of Eheliyagoda since our charter, driven by the motto "We Serve."
+          </p>
+          <div class="contact-social">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <span class="material-icons-round">facebook</span>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <span class="material-icons-round">photo_camera</span>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <span class="material-icons-round">smart_display</span>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#projects">Our Projects</a></li>
+            <li><a href="#impact">Impact</a></li>
+            <li><a href="#history">Our Journey</a></li>
+            <li><a href="#board">Leadership</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get Involved</h4>
+          <ul class="footer-links">
+            <li><a href="#contact">Become a Member</a></li>
+            <li><a href="#contact">Volunteer</a></li>
+            <li><a href="#contact">Donate</a></li>
+            <li><a href="#events">Upcoming Events</a></li>
+            <li><a href="#contact">Sponsorship</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Lions International</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.lionsclubs.org/" target="_blank" rel="noopener">Lions Clubs International</a></li>
+            <li><a href="https://lionsmd306.lk/" target="_blank" rel="noopener">District 306 D7 — Sri Lanka</a></li>
+            <li><a href="https://www.lcif.org/" target="_blank" rel="noopener">LCIF Foundation</a></li>
+            <li><a href="#contact">Contact District</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Lions Club of Eheliyagoda Legacy. All rights reserved.</span>
+        <span>Affiliated with <a href="https://www.lionsclubs.org/" target="_blank" rel="noopener" class="lions-intl">Lions Clubs International</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== Back to Top ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <span class="material-icons-round">keyboard_arrow_up</span>
+  </button>
+
+  <!-- ===== Toast Notification ===== -->
+  <div class="toast" id="toast">
+    <span class="material-icons-round" style="color:var(--accent-emerald)">check_circle</span>
+    <span id="toastMessage">Message sent successfully!</span>
+  </div>
+
+  <!-- ===== JavaScript ===== -->
+  <script src="script.js"></script>
+</body>
+</html>
