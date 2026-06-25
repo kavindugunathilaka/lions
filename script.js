@@ -176,6 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function animateCounter(element) {
     const target = parseInt(element.getAttribute('data-count'));
+    const plain = element.hasAttribute('data-plain');
     const duration = 2000;
     const startTime = performance.now();
 
@@ -189,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const easedProgress = easeOutExpo(progress);
       const current = Math.round(easedProgress * target);
 
-      element.textContent = formatNumber(current);
+      element.textContent = plain ? current.toString() : formatNumber(current);
 
       if (progress < 1) {
         requestAnimationFrame(update);

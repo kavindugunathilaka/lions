@@ -1600,10 +1600,12 @@ ul {
 }
 
 .event-date-box .event-month {
-  font-size: 0.7rem;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  line-height: 1.1;
   color: var(--primary-gold-light);
 }
 
