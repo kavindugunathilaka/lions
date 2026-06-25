@@ -383,5 +383,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
-  console.log('%c🦁 Lions Club of Eheliyagoda Legacy — We Serve', 'color: #d4a843; font-size: 16px; font-weight: bold;');
+  console.log('%c🦁 Lions Club of Eheliyagoda Legacy — Our Service Today, Our Legacy Tomorrow', 'color: #d4a843; font-size: 16px; font-weight: bold;');
 });

@@ -983,6 +983,20 @@ ul {
   gap: 10px;
 }
 
+.project-link--soon {
+  color: var(--gray-400);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: default;
+}
+
+.project-link--soon:hover {
+  color: var(--gray-400);
+  gap: 6px;
+}
+
 /* ===== Impact Section ===== */
 .impact {
   padding: var(--section-padding);
