@@ -8,39 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Enable scroll animations once JS is ready
   document.body.classList.add('js-ready');
 
-  // ===== Intro Video Screen =====
-  const introScreen = document.getElementById('introVideoScreen');
-  const introVideo = document.getElementById('introVideo');
-  const skipBtn = document.getElementById('introSkipBtn');
+  // ===== Loading Screen =====
   const loadingScreen = document.getElementById('loadingScreen');
 
-  const dismissIntro = () => {
-    if (introScreen && !introScreen.classList.contains('hidden')) {
-      introScreen.classList.add('hidden');
-      // Hide loading screen right after intro (page is already loaded by then)
-      if (loadingScreen) loadingScreen.classList.add('hidden');
-    }
-  };
-
-  if (introVideo) {
-    introVideo.addEventListener('ended', dismissIntro);
-    // Fallback: dismiss after 30s max in case video is very long
-    setTimeout(dismissIntro, 30000);
-  } else {
-    dismissIntro();
-  }
-
-  if (skipBtn) {
-    skipBtn.addEventListener('click', () => {
-      if (introVideo) introVideo.pause();
-      dismissIntro();
-    });
-  }
-
-  // ===== Loading Screen =====
   const hideLoader = () => {
-    // Only hide loading screen if intro is already gone
-    if (introScreen && !introScreen.classList.contains('hidden')) return;
     if (loadingScreen && !loadingScreen.classList.contains('hidden')) {
       loadingScreen.classList.add('hidden');
     }
