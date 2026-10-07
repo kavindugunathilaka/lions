@@ -1,12 +1,12 @@
 /* ===== Design Tokens ===== */
 :root {
-  /* Lions International Colors - Refined Palette */
-  --primary-navy: #0a1628;
-  --primary-blue: #003399;
-  --primary-blue-light: #1a56db;
-  --primary-gold: #d4a843;
-  --primary-gold-light: #f0c75e;
-  --primary-gold-dark: #b8922e;
+  /* Lions International Colors - Official Brand Palette */
+  --primary-navy: #0d2240;
+  --primary-blue: #0a3dab;
+  --primary-blue-light: #2a74d5;
+  --primary-gold: #f9c910;
+  --primary-gold-light: #ffdb4d;
+  --primary-gold-dark: #d4a800;
 
   /* Neutrals */
   --white: #ffffff;
@@ -21,16 +21,16 @@
   --gray-700: #1a202c;
   --gray-800: #0f1319;
 
-  /* Accent Colors */
-  --accent-emerald: #10b981;
-  --accent-sky: #38bdf8;
+  /* Accent Colors - Lions secondary brand */
+  --accent-emerald: #00bd71;
+  --accent-sky: #2a74d5;
   --accent-rose: #f43f5e;
-  --accent-violet: #8b5cf6;
+  --accent-violet: #8b2994;
 
   /* Gradients */
-  --gradient-hero: linear-gradient(135deg, rgba(10, 22, 40, 0.92) 0%, rgba(0, 51, 153, 0.85) 50%, rgba(26, 86, 219, 0.75) 100%);
-  --gradient-gold: linear-gradient(135deg, #d4a843 0%, #f0c75e 50%, #b8922e 100%);
-  --gradient-navy: linear-gradient(135deg, #0a1628 0%, #003399 100%);
+  --gradient-hero: linear-gradient(135deg, rgba(13, 34, 64, 0.92) 0%, rgba(10, 61, 171, 0.85) 55%, rgba(42, 116, 213, 0.72) 100%);
+  --gradient-gold: linear-gradient(135deg, #f9c910 0%, #ffdb4d 50%, #d4a800 100%);
+  --gradient-navy: linear-gradient(135deg, #0d2240 0%, #0a3dab 100%);
   --gradient-card: linear-gradient(145deg, rgba(255,255,255,0.95), rgba(248,249,252,0.9));
   --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
 
@@ -39,12 +39,12 @@
   --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
   --shadow-lg: 0 10px 40px rgba(0,0,0,0.12);
   --shadow-xl: 0 20px 60px rgba(0,0,0,0.15);
-  --shadow-gold: 0 4px 20px rgba(212, 168, 67, 0.3);
-  --shadow-blue: 0 4px 20px rgba(0, 51, 153, 0.2);
+  --shadow-gold: 0 4px 20px rgba(249, 201, 16, 0.35);
+  --shadow-blue: 0 4px 20px rgba(10, 61, 171, 0.25);
 
-  /* Typography */
-  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-display: 'Playfair Display', Georgia, serif;
+  /* Typography - Lions uses Helvetica Neue (Arial fallback) */
+  --font-primary: 'Helvetica Neue', Helvetica, Arial, 'Segoe UI', sans-serif;
+  --font-display: 'Helvetica Neue', Helvetica, Arial, 'Segoe UI', sans-serif;
 
   /* Spacing */
   --section-padding: 100px 0;
@@ -126,8 +126,8 @@ ul {
   align-items: center;
   gap: 8px;
   padding: 8px 20px;
-  background: linear-gradient(135deg, rgba(212,168,67,0.1), rgba(212,168,67,0.05));
-  border: 1px solid rgba(212,168,67,0.2);
+  background: linear-gradient(135deg, rgba(249,201,16,0.1), rgba(249,201,16,0.05));
+  border: 1px solid rgba(249,201,16,0.2);
   border-radius: var(--radius-full);
   font-size: 0.8rem;
   font-weight: 600;
@@ -151,10 +151,7 @@ ul {
 }
 
 .section-title .highlight {
-  background: var(--gradient-gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--primary-blue);
 }
 
 .section-subtitle {
@@ -346,7 +343,7 @@ ul {
 
 .nav-cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(212, 168, 67, 0.4) !important;
+  box-shadow: 0 6px 25px rgba(249, 201, 16, 0.4) !important;
   background: var(--gradient-gold) !important;
 }
 
@@ -443,7 +440,7 @@ ul {
   position: absolute;
   inset: 0;
   z-index: 2;
-  background-image: radial-gradient(rgba(212,168,67,0.05) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(249,201,16,0.05) 1px, transparent 1px);
   background-size: 30px 30px;
 }
 
@@ -463,7 +460,7 @@ ul {
   padding: 10px 24px;
   background: rgba(255,255,255,0.08);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(212,168,67,0.3);
+  border: 1px solid rgba(249,201,16,0.3);
   border-radius: var(--radius-full);
   font-size: 0.82rem;
   font-weight: 600;
@@ -552,7 +549,7 @@ ul {
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(212, 168, 67, 0.45);
+  box-shadow: 0 8px 30px rgba(249, 201, 16, 0.5);
 }
 
 .btn-primary::after {
@@ -589,7 +586,7 @@ ul {
 .btn-solid:hover {
   background: var(--primary-blue-light);
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(0, 51, 153, 0.35);
+  box-shadow: 0 8px 30px rgba(10, 61, 171, 0.4);
 }
 
 .hero-stats {
@@ -782,12 +779,12 @@ ul {
 }
 
 .vm-vision {
-  background: rgba(0, 51, 153, 0.05);
+  background: rgba(10, 61, 171, 0.05);
   border-left-color: var(--primary-blue);
 }
 
 .vm-mission {
-  background: rgba(212, 168, 67, 0.08);
+  background: rgba(249, 201, 16, 0.08);
   border-left-color: var(--primary-gold);
 }
 
@@ -1009,7 +1006,7 @@ ul {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(212,168,67,0.04) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(249,201,16,0.04) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
@@ -1042,7 +1039,7 @@ ul {
 .impact-stat:hover {
   background: rgba(255,255,255,0.08);
   transform: translateY(-4px);
-  border-color: rgba(212,168,67,0.3);
+  border-color: rgba(249,201,16,0.35);
 }
 
 .impact-stat .stat-icon {
@@ -1054,7 +1051,7 @@ ul {
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  background: rgba(212,168,67,0.1);
+  background: rgba(249,201,16,0.1);
   color: var(--primary-gold-light);
 }
 
@@ -1062,7 +1059,7 @@ ul {
   font-family: var(--font-display);
   font-size: 2.8rem;
   font-weight: 700;
-  color: var(--white);
+  color: var(--primary-gold);
   line-height: 1;
   margin-bottom: 6px;
 }
@@ -1129,7 +1126,7 @@ ul {
   border-radius: 50%;
   background: var(--primary-gold);
   border: 3px solid var(--off-white);
-  box-shadow: 0 0 0 4px rgba(212,168,67,0.2);
+  box-shadow: 0 0 0 4px rgba(249,201,16,0.2);
   z-index: 2;
 }
 
@@ -1149,7 +1146,7 @@ ul {
 .timeline-year {
   display: inline-block;
   padding: 4px 12px;
-  background: rgba(212,168,67,0.1);
+  background: rgba(249,201,16,0.1);
   color: var(--primary-gold-dark);
   font-size: 0.78rem;
   font-weight: 700;
@@ -1267,8 +1264,8 @@ ul {
   margin: 0;
 }
 
-.board-card--lead {
-  border-color: var(--primary-gold);
+.board-card.board-card--lead {
+  border: 2px solid var(--primary-gold);
   box-shadow: var(--shadow-md);
 }
 
@@ -1341,7 +1338,7 @@ ul {
   overflow: hidden;
   position: relative;
   border: 3px solid var(--primary-gold);
-  box-shadow: 0 0 0 5px rgba(212, 168, 67, 0.12), 0 8px 24px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 0 0 5px rgba(249, 201, 16, 0.12), 0 8px 24px rgba(0, 0, 0, 0.14);
   flex-shrink: 0;
 }
 
@@ -1600,7 +1597,7 @@ ul {
 .event-card:hover {
   box-shadow: var(--shadow-lg);
   transform: translateY(-4px);
-  border-color: rgba(212,168,67,0.3);
+  border-color: rgba(249,201,16,0.3);
 }
 
 .event-date-box {
@@ -1725,7 +1722,7 @@ ul {
 .form-group textarea:focus,
 .form-group select:focus {
   border-color: var(--primary-gold);
-  box-shadow: 0 0 0 4px rgba(212,168,67,0.1);
+  box-shadow: 0 0 0 4px rgba(249,201,16,0.1);
 }
 
 .form-group textarea {
@@ -1758,7 +1755,7 @@ ul {
 .contact-info-card:hover {
   box-shadow: var(--shadow-md);
   transform: translateX(6px);
-  border-color: rgba(212,168,67,0.3);
+  border-color: rgba(249,201,16,0.3);
 }
 
 .contact-icon {
@@ -1770,7 +1767,7 @@ ul {
   justify-content: center;
   font-size: 1.2rem;
   flex-shrink: 0;
-  background: rgba(0,51,153,0.08);
+  background: rgba(10,61,171,0.08);
   color: var(--primary-blue);
 }
 
@@ -1831,7 +1828,7 @@ ul {
   width: 400px;
   height: 400px;
   border-radius: 50%;
-  background: rgba(212,168,67,0.05);
+  background: rgba(249,201,16,0.05);
   filter: blur(60px);
 }
 
@@ -1982,7 +1979,7 @@ ul {
 
 .back-to-top:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(212, 168, 67, 0.5);
+  box-shadow: 0 8px 30px rgba(249, 201, 16, 0.5);
 }
 
 /* ===== Loading Screen ===== */
@@ -2028,7 +2025,7 @@ ul {
 }
 
 .intro-skip-btn:hover {
-  background: rgba(212, 168, 67, 0.85);
+  background: rgba(249, 201, 16, 0.85);
   border-color: var(--primary-gold);
   transform: scale(1.04);
 }
@@ -2061,7 +2058,7 @@ ul {
 .loading-spinner {
   width: 40px;
   height: 40px;
-  border: 3px solid rgba(212,168,67,0.2);
+  border: 3px solid rgba(249,201,16,0.2);
   border-top-color: var(--primary-gold);
   border-radius: 50%;
   animation: rotate-slow 1s linear infinite;
