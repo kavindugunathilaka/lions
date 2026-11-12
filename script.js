@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===== Navbar Scroll Effect =====
   const navbar = document.getElementById('navbar');
   const backToTop = document.getElementById('backToTop');
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const navLinks = document.getElementById('navLinks');
 
   function handleScroll() {
     const scrollY = window.scrollY;
@@ -62,9 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ===== Mobile Menu =====
-  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-  const navLinks = document.getElementById('navLinks');
-
   mobileMenuBtn.addEventListener('click', () => {
     mobileMenuBtn.classList.toggle('active');
     navLinks.classList.toggle('active');
@@ -280,7 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ===== Gallery Lightbox =====
+  // ===== Lightbox (Gallery + Per-Project Galleries) =====
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightboxImg');
   const lightboxCaption = document.getElementById('lightboxCaption');
@@ -289,15 +288,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightboxNext = document.getElementById('lightboxNext');
 
   if (lightbox) {
-    const galleryItems = Array.from(document.querySelectorAll('[data-lightbox]'));
+    let currentSet = [];   // array of { src, caption }
     let currentIndex = 0;
 
-    function openLightbox(index) {
-      currentIndex = index;
-      const item = galleryItems[index];
-      lightboxImg.src = item.dataset.lightbox;
-      lightboxImg.alt = item.querySelector('img')?.alt || '';
-      lightboxCaption.textContent = item.dataset.caption || '';
+    function render() {
+      const item = currentSet[currentIndex];
+      if (!item) return;
+      lightboxImg.src = item.src;
+      lightboxImg.alt = item.caption || '';
+      lightboxCaption.textContent = item.caption || '';
+    }
+
+    function openLightbox(set, index) {
+      currentSet = set;
+      currentIndex = index || 0;
+      render();
       lightbox.classList.add('active');
       document.body.style.overflow = 'hidden';
     }
@@ -308,31 +313,63 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => { lightboxImg.src = ''; }, 300);
     }
 
-    function showPrev() {
-      currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+    function step(dir) {
+      if (currentSet.length < 2) return;
+      currentIndex = (currentIndex + dir + currentSet.length) % currentSet.length;
       lightboxImg.style.opacity = '0';
-      setTimeout(() => {
-        openLightbox(currentIndex);
-        lightboxImg.style.opacity = '1';
-      }, 150);
+      setTimeout(() => { render(); lightboxImg.style.opacity = '1'; }, 150);
     }
 
-    function showNext() {
-      currentIndex = (currentIndex + 1) % galleryItems.length;
-      lightboxImg.style.opacity = '0';
-      setTimeout(() => {
-        openLightbox(currentIndex);
-        lightboxImg.style.opacity = '1';
-      }, 150);
-    }
+    // --- Gallery section (existing [data-lightbox] items) ---
+    const galleryItems = Array.from(document.querySelectorAll('[data-lightbox]'));
+    const gallerySet = galleryItems.map(el => ({
+      src: el.dataset.lightbox,
+      caption: el.dataset.caption || (el.querySelector('img')?.alt || '')
+    }));
+    galleryItems.forEach((item, i) => item.addEventListener('click', () => openLightbox(gallerySet, i)));
 
-    galleryItems.forEach((item, i) => {
-      item.addEventListener('click', () => openLightbox(i));
+    // --- Per-project galleries (indexed by card order) ---
+    const projectGalleries = [
+      ["images/projects/p01/1.jpg","images/projects/p01/2.jpg","images/projects/p01/3.jpg","images/projects/p01/4.jpg","images/projects/p01/5.jpg","images/projects/p01/6.jpg","images/projects/p01/7.jpg","images/projects/p01/8.jpg"],
+      ["images/projects/p02/1.jpg","images/projects/p02/2.jpg","images/projects/p02/3.jpg","images/projects/p02/4.jpg","images/projects/p02/5.jpg"],
+      ["images/projects/p03/1.jpg","images/projects/p03/2.jpg","images/projects/p03/3.jpg","images/projects/p03/4.jpg","images/projects/p03/5.jpg"],
+      ["images/projects/p04/1.jpg","images/projects/p04/2.jpg","images/projects/p04/3.jpg","images/projects/p04/4.jpg","images/projects/p04/5.jpg","images/projects/p04/6.jpg","images/projects/p04/7.jpg"],
+      ["images/projects/p05/1.jpg","images/projects/p05/2.jpg","images/projects/p05/3.jpg","images/projects/p05/4.jpg","images/projects/p05/5.jpg","images/projects/p05/6.jpg"],
+      ["images/projects/p06/1.jpg","images/projects/p06/2.jpg"],
+      ["images/projects/p07/1.jpg","images/projects/p07/2.jpg","images/projects/p07/3.jpg","images/projects/p07/4.jpg","images/projects/p07/5.jpg","images/projects/p07/6.jpg","images/projects/p07/7.jpg","images/projects/p07/8.jpg","images/projects/p07/9.jpg","images/projects/p07/10.jpg"],
+      ["images/projects/p08/1.jpg","images/projects/p08/2.jpg","images/projects/p08/3.jpg","images/projects/p08/4.jpg","images/projects/p08/5.jpg","images/projects/p08/6.jpg"],
+      ["images/projects/p09/1.jpg","images/projects/p09/2.jpg","images/projects/p09/3.jpg","images/projects/p09/4.jpg","images/projects/p09/5.jpg","images/projects/p09/6.jpg","images/projects/p09/7.jpg"],
+      ["images/projects/p10/1.jpg","images/projects/p10/2.jpg","images/projects/p10/3.jpg","images/projects/p10/4.jpg","images/projects/p10/5.jpg","images/projects/p10/6.jpg","images/projects/p10/7.jpg","images/projects/p10/8.jpg","images/projects/p10/9.jpg","images/projects/p10/10.jpg","images/projects/p10/11.jpg","images/projects/p10/12.jpg"],
+      ["images/projects/p11/1.jpg","images/projects/p11/2.jpg","images/projects/p11/3.jpg","images/projects/p11/4.jpg","images/projects/p11/5.jpg","images/projects/p11/6.jpg","images/projects/p11/7.jpg","images/projects/p11/8.jpg"],
+      ["images/projects/p12/1.jpg","images/projects/p12/2.jpg","images/projects/p12/3.jpg","images/projects/p12/4.jpg","images/projects/p12/5.jpg","images/projects/p12/6.jpg","images/projects/p12/7.jpg","images/projects/p12/8.jpg","images/projects/p12/9.jpg","images/projects/p12/10.jpg","images/projects/p12/11.jpg","images/projects/p12/12.jpg","images/projects/p12/13.jpg","images/projects/p12/14.jpg","images/projects/p12/15.jpg"],
+      ["images/projects/p13/1.jpg","images/projects/p13/2.jpg","images/projects/p13/3.jpg"],
+      ["images/projects/p14/1.jpg","images/projects/p14/2.jpg","images/projects/p14/3.jpg","images/projects/p14/4.jpg","images/projects/p14/5.jpg","images/projects/p14/6.jpg","images/projects/p14/7.jpg"],
+      ["images/projects/p15/1.jpg","images/projects/p15/2.jpg","images/projects/p15/3.jpg","images/projects/p15/4.jpg","images/projects/p15/5.jpg","images/projects/p15/6.jpg","images/projects/p15/7.jpg","images/projects/p15/8.jpg","images/projects/p15/9.jpg","images/projects/p15/10.jpg","images/projects/p15/11.jpg","images/projects/p15/12.jpg"],
+      ["images/projects/p16/1.jpg","images/projects/p16/2.jpg","images/projects/p16/3.jpg","images/projects/p16/4.jpg"],
+      ["images/projects/p17/1.jpg","images/projects/p17/2.jpg","images/projects/p17/3.jpg","images/projects/p17/4.jpg","images/projects/p17/5.jpg","images/projects/p17/6.jpg","images/projects/p17/7.jpg","images/projects/p17/8.jpg","images/projects/p17/9.jpg","images/projects/p17/10.jpg","images/projects/p17/11.jpg","images/projects/p17/12.jpg","images/projects/p17/13.jpg","images/projects/p17/14.jpg","images/projects/p17/15.jpg","images/projects/p17/16.jpg","images/projects/p17/17.jpg","images/projects/p17/18.jpg","images/projects/p17/19.jpg","images/projects/p17/20.jpg"]
+    ];
+    const projectCards = Array.from(document.querySelectorAll('.projects-grid .project-card'));
+    projectCards.forEach((card, i) => {
+      const imgs = projectGalleries[i];
+      if (!imgs || !imgs.length) return;
+      const title = (card.querySelector('h3')?.textContent || 'Project').trim();
+      const imgWrap = card.querySelector('.project-card-image');
+      if (imgWrap) {
+        const badge = document.createElement('span');
+        badge.className = 'project-photo-count';
+        badge.innerHTML = '<span class="material-icons-round">photo_library</span> ' + imgs.length;
+        imgWrap.appendChild(badge);
+      }
+      card.classList.add('project-card--clickable');
+      card.addEventListener('click', () => {
+        const set = imgs.map((src, idx) => ({ src, caption: title + '  ·  ' + (idx + 1) + ' / ' + imgs.length }));
+        openLightbox(set, 0);
+      });
     });
 
     lightboxClose.addEventListener('click', closeLightbox);
-    lightboxPrev.addEventListener('click', showPrev);
-    lightboxNext.addEventListener('click', showNext);
+    lightboxPrev.addEventListener('click', () => step(-1));
+    lightboxNext.addEventListener('click', () => step(1));
 
     lightbox.addEventListener('click', (e) => {
       if (e.target === lightbox) closeLightbox();
@@ -341,8 +378,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => {
       if (!lightbox.classList.contains('active')) return;
       if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowLeft') showPrev();
-      if (e.key === 'ArrowRight') showNext();
+      if (e.key === 'ArrowLeft') step(-1);
+      if (e.key === 'ArrowRight') step(1);
     });
 
     // Touch swipe support
@@ -350,7 +387,7 @@ document.addEventListener('DOMContentLoaded', () => {
     lightbox.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
     lightbox.addEventListener('touchend', (e) => {
       const diff = touchStartX - e.changedTouches[0].clientX;
-      if (Math.abs(diff) > 50) diff > 0 ? showNext() : showPrev();
+      if (Math.abs(diff) > 50) step(diff > 0 ? 1 : -1);
     }, { passive: true });
   }
 
