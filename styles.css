@@ -931,6 +931,39 @@ ul {
   color: var(--white);
 }
 
+.category-community {
+  background: rgba(139, 41, 148, 0.9);
+  color: var(--white);
+}
+
+.project-people {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--primary-blue);
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.project-people .material-icons-round {
+  font-size: 1rem;
+  flex-shrink: 0;
+  color: var(--primary-gold-dark);
+}
+
+.project-tag-done {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-emerald);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 .project-card-body {
   padding: 24px;
 }
